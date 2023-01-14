@@ -74,8 +74,7 @@ export default function Profile() {
     }
   }
   function onEdit(listingID){
-    navigate(`/edit/${listingID}`)
-    toast.success("Edited profile")
+    navigate(`/edit-listing/${listingID}`)
   }
   return (
     <>
