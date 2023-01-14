@@ -26,3 +26,4 @@ yarn-error.log*
 # files
 Firebase rules.txt
 firebase.js
+env.local
