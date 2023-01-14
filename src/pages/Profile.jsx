@@ -75,8 +75,8 @@ export default function Profile() {
 
             <input type="email" id="email" value={email} disabled className='w-full px-4 py-2 text-xl mb-6 text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out' />
 
-            <div className='flex justify-between whitespace-nowrap text-sm sm:text-lg mb-6'>
-              <p className='flex items-center'>Do you want to change your name?
+            <div className='flex justify-between flex-wrap whitespace-nowrap text-sm sm:text-lg mb-6'>
+              <p className='flex items-center flex-wrap'>Do you want to change your name?
                 <span className='text-red-600 hover:text-red-700 transition ease-in-out duration-200 ml-1 cursor-pointer' onClick={() => {
                   changeDetail && onSubmit()
                   setChangeDetail((prevState) => !prevState);
@@ -97,8 +97,8 @@ export default function Profile() {
         <div className='max-w-6xl px-3 mt-6 mx-auto'>
         {!loading && listings.length > 0 && (
           <>
-            <h2 className='text-2xl text-center font-semibold'>My Listings</h2>
-            <ul>
+            <h2 className='text-2xl text-center font-semibold mb-6'>My Listings</h2>
+            <ul className='sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl=grid-cols-5 mt-6 mb-6'>
               {listings.map((listing)=>(
                 <ListingItem key={listing.id} id={listing.id}
                 listing={listing.data}/>
